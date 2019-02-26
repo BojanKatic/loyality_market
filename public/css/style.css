@@ -1,0 +1,136 @@
+.b_margin_btm20 { margin-bottom:20px;}
+
+.b_margin_top20 { margin-top:20px;}
+.b_margin_top30 { margin-top:30px;}
+
+.input_border_none { border:none; }
+
+.table_border_bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+/***Home */
+p.section_title_home{
+    background-color: blanchedalmond;
+}
+.home_search_box {
+    display: -webkit-inline-box;
+}
+.home_search_box input{
+    width: 200px;
+    border-bottom: 1px solid #eee;
+    margin-right:10px;
+}
+.search_result ul{
+    float: right;
+    margin-right: 120px;
+    list-style: none;
+    margin-top: 10px;
+}
+.search_result ul li{
+    border-bottom: 1px solid #eee;
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 1px;
+}
+.search_result a{
+    text-decoration: none;
+}
+.dashboard_section_title span{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.dashboard_half_div{
+    height: 200px;
+}
+.dashboard_log_conent p{
+    margin-bottom: 1px;
+    border-bottom: 1px dotted #eee;
+}
+
+/*********************************/
+/***********Resource section *******/
+/********************************/
+.disabled span{
+    cursor:pointer;
+    color:#3490dc;
+    opacity: 0.5;
+}
+
+.display_none {
+    display: none;
+}
+
+.resource_count_control {
+    display: -webkit-inline-box;
+}
+.resource_count_control a{
+    background-color: #3490dc;
+    padding: 3px 0px 3px 7px;
+    color: #fff;
+    border-radius: 3px;
+}
+.resource_count_control a:hover{
+    background-color: #43a0ec;
+    color: #fff;
+}
+.resource_count_control .fas{
+    margin-right: 5px;
+}
+
+/*********************************/
+/***********Client section *******/
+/********************************/
+.card-header h4 {
+    margin-bottom: 0px;
+}
+.universe_form label {
+    float:right;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.client_profile img{
+    height:250px;
+    width:200px;
+    object-fit: cover;
+}
+.client_invoice_pagination li {
+    padding: 5px 10px;
+    border: 1px solid #3490dc;
+    margin-left: -1.5px;
+}
+.client_invoice_pagination .active li {
+    background: #3490dc;
+    color:#fff;
+}
+.cart_button {
+    background-color: #2176bd;
+    border-color: #1f6fb2;
+    border: 0px;
+    color: #fff;
+    padding: 3px 10px;
+    cursor:pointer;
+}
+.cart_button:hover {
+    background-color: #43a0ec;
+}
+.cart_input {
+    width:100px;
+    margin: 0 10px;
+    text-align: center;
+}
+.shoping_basket {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.vidlijivaKosara {
+    position: absolute;
+    left: -300px;
+    top:200px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+
