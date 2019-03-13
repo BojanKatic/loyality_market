@@ -219,6 +219,30 @@ class ClientsController extends Controller
 
     public function finishInvoice(Request $request)
     {
+        $cart_amount = $request->cart_amount;
+
+        $clean_total_format = str_replace(".", "", $cart_amount);
+
+        $stripe = [
+          "secret_key"      => "sk_test_nbOvU4UHVNZo8kO4Ei3udvPQ",
+          "publishable_key" => "pk_test_c5TashnOBNfPfSj2oQUwJL6r",
+        ];
+
+        \Stripe\Stripe::setApiKey($stripe['secret_key']); 
+
+        $token  = $_POST['stripeToken'];
+        $email  = $_POST['stripeEmail'];
+      
+        $customer = \Stripe\Customer::create([
+            'email' => $email,
+            'source'  => $token,
+        ]);
+      
+        $charge = \Stripe\Charge::create([
+            'customer' => $customer->id,
+            'amount'   => $clean_total_format,
+            'currency' => 'BAM',
+        ]);
 
         $order_main_data = $request->session()->get('orderData');
         $order_main_data_jsoned = json_decode($order_main_data, true);
