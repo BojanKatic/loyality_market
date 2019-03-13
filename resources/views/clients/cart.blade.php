@@ -58,7 +58,21 @@ session_start();
             </tr>
         </tbody>
     </table>
-    <a href="/client/finish-order" class="btn btn-primary">Finish order </a>
+    <?php 
+
+ $clean_total_format = str_replace(".", "", $total);
+  ?> 
+    
+    <form action="/client/finish-order" method="post">
+    <input type="hidden" type="number" value="{{$total}}" name="cart_amount" />
+        {{ csrf_field() }}
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<?php echo $stripe['publishable_key']; ?>"
+            data-description="Payment window"
+            data-amount="{{$clean_total_format}}"
+            data-locale="auto">
+        </script>
+    </form>
 <?php
     $invoiceData[] = array(  
         'clientId' => $client_data['0']->id,
